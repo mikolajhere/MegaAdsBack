@@ -3,6 +3,7 @@ import cors from "cors";
 import rateLimit from "express-rate-limit";
 import "express-async-errors";
 import { handleError, ValidationError } from "./utils/errors";
+import { adRouter } from "./routers/ad.router";
 
 const app = express();
 
@@ -19,16 +20,10 @@ app.use(
   })
 );
 
-// routes...
-
-// app.get("/", async (req, res) => {
-//   throw new ValidationError("Daaamn!");
-// });
+app.use("/ad", adRouter);
 
 app.use(handleError);
 
 app.listen(3001, "0.0.0.0", () => {
   console.log("Listening on http://localhost:3001");
 });
-
-// TODO
