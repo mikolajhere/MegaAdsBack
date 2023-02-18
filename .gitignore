@@ -143,6 +143,6 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node
 
-utils/db.ts
+# utils/db.ts
 
-config/config.ts
+# config/config.ts
